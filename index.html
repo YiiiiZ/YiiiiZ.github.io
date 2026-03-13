@@ -3,288 +3,486 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yi Zheng</title>
+  <title>Yi Zheng — Quantum Scientist</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <ul>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">Yi Zheng</a>
+    <ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
+    </button>
+  </div>
 </nav>
 
 <main>
 
   <!-- HERO -->
   <section id="hero">
-    <h1>Yi Zheng</h1>
-    <p class="tagline">Quantum Scientist &nbsp;·&nbsp; UCLA &nbsp;·&nbsp; Cambridge</p>
-    <div class="contact-links">
-      <a href="mailto:yizheng.0122@gmail.com">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        yizheng.0122@gmail.com
-      </a>
-      <a href="https://linkedin.com/in/yi-zheng0122" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://github.com/YiiiiZ" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        github.com/YiiiiZ
-      </a>
+    <div class="hero-text">
+      <h1>Yi <span>Zheng</span></h1>
+      <p class="tagline">Quantum Scientist &nbsp;·&nbsp; UCLA &nbsp;·&nbsp; Cambridge</p>
+      <div class="typed-wrapper">
+        <span id="typed-text"></span><span class="typed-cursor"></span>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:yizheng.0122@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          yizheng.0122@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/yi-zheng0122" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/YiiiiZ" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          github.com/YiiiiZ
+        </a>
+      </div>
+    </div>
+    <img class="hero-photo" src="photos/graduation.jpg" alt="Yi Zheng at Cambridge graduation" />
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2>News</h2>
+    <div class="news-list">
+      <div class="news-item reveal">
+        <span class="news-date">Mar 2026</span>
+        <span class="news-text"><span class="news-tag tag-research">Research</span>Personal website launched — find all my work here.</span>
+      </div>
+      <div class="news-item reveal reveal-delay-1">
+        <span class="news-date">Nov 2025</span>
+        <span class="news-text"><span class="news-tag tag-research">Research</span>Joined <strong>Prof. Zhurun Ji's group</strong> at SLAC National Accelerator Laboratory / Stanford, working on quantum materials and cryogenic microwave devices.</span>
+      </div>
+      <div class="news-item reveal reveal-delay-1">
+        <span class="news-date">Nov 2025</span>
+        <span class="news-text"><span class="news-tag tag-news">Work</span>Started as a <strong>Physics Expert</strong> at Mercor AI, designing advanced physics problems to probe reasoning limits of AI models.</span>
+      </div>
+      <div class="news-item reveal reveal-delay-2">
+        <span class="news-date">Sep 2025</span>
+        <span class="news-text"><span class="news-tag tag-edu">Education</span>Graduated from UCLA with an <strong>MSc in Quantum Science and Technology</strong> (GPA 3.967/4).</span>
+      </div>
+      <div class="news-item reveal reveal-delay-2">
+        <span class="news-date">May 2025</span>
+        <span class="news-text"><span class="news-tag tag-research">Research</span>Joined <strong>Prof. Chee Wei Wong's group</strong> at UCLA, designing and characterizing superconducting qubit chips.</span>
+      </div>
+      <div class="news-item reveal reveal-delay-3">
+        <span class="news-date">Jun 2024</span>
+        <span class="news-text"><span class="news-tag tag-edu">Education</span>Graduated from the <strong>University of Cambridge</strong> with a BA (Hons) in Physics.</span>
+      </div>
     </div>
   </section>
 
   <!-- EDUCATION -->
   <section id="education">
     <h2>Education</h2>
+    <div class="edu-grid">
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">University of California, Los Angeles</span>
-        <span class="entry-date">Sep 2024 – Sep 2025</span>
+      <div class="edu-card reveal">
+        <div class="edu-school">University of California, Los Angeles</div>
+        <div class="edu-degree">Master of Quantum Science and Technology</div>
+        <div class="edu-meta">
+          <span class="edu-date">Sep 2024 – Sep 2025 &nbsp;·&nbsp; Los Angeles, USA</span>
+          <span class="edu-badge">GPA 3.967 / 4</span>
+        </div>
       </div>
-      <div class="entry-sub">
-        <span>Master of Quantum Science and Technology &nbsp;·&nbsp; GPA: 3.967/4</span>
-        <span>Los Angeles, USA</span>
-      </div>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">University of Cambridge</span>
-        <span class="entry-date">Sep 2021 – Jun 2024</span>
+      <div class="edu-card reveal reveal-delay-1">
+        <div class="edu-school">University of Cambridge</div>
+        <div class="edu-degree">Bachelor of Arts with Honors in Physics</div>
+        <div class="edu-meta">
+          <span class="edu-date">Sep 2021 – Jun 2024 &nbsp;·&nbsp; Cambridge, UK</span>
+        </div>
       </div>
-      <div class="entry-sub">
-        <span>Bachelor of Arts with Honors in Physics</span>
-        <span>Cambridge, UK</span>
-      </div>
+
     </div>
   </section>
 
   <!-- RESEARCH -->
   <section id="research">
     <h2>Research Experience</h2>
+    <div class="entries">
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">SLAC National Accelerator Laboratory, Stanford University</span>
-        <span class="entry-date">Nov 2025 – Present</span>
+      <div class="entry reveal">
+        <div class="entry-header">
+          <span class="entry-title">SLAC National Accelerator Laboratory, Stanford University</span>
+          <span class="entry-date">Nov 2025 – Present</span>
+        </div>
+        <div class="entry-sub">
+          <span>Prof. Zhurun Ji's Group &nbsp;·&nbsp; Quantum Materials</span>
+          <span>Palo Alto, US</span>
+        </div>
+        <ul>
+          <li>Built ADS simulation workflows for cryogenic microwave Mach–Zehnder interferometers to extract 2D-material properties (kinetic inductance, complex conductivity, surface impedance, transition frequency) through full-frequency analysis of S<sub>21</sub> and group-delay contrast.</li>
+          <li>Supported setup of a new dilution refrigerator — RF-line design, thermal-load estimation, component selection, and integration for microwave and mm-wave operation.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Prof. Zhurun Ji's Group &nbsp;·&nbsp; Quantum Materials</span>
-        <span>Palo Alto, US</span>
-      </div>
-      <ul>
-        <li>Built ADS simulation workflows for cryogenic microwave Mach–Zehnder interferometers to extract 2D-material properties, including kinetic inductance, complex conductivity, surface impedance, and transition frequency, through full-frequency analysis of S<sub>21</sub> and group-delay contrast.</li>
-        <li>Supported the setup of a new dilution refrigerator, including RF-line design, thermal-load estimation, component selection, and integration for microwave and mm-wave operation.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">University of California, Los Angeles (UCLA)</span>
-        <span class="entry-date">May 2025 – Sep 2025</span>
+      <div class="entry reveal reveal-delay-1">
+        <div class="entry-header">
+          <span class="entry-title">University of California, Los Angeles (UCLA)</span>
+          <span class="entry-date">May 2025 – Sep 2025</span>
+        </div>
+        <div class="entry-sub">
+          <span>Prof. Chee Wei Wong's Group &nbsp;·&nbsp; Superconducting Qubits</span>
+          <span>Los Angeles, CA</span>
+        </div>
+        <ul>
+          <li>Designed and simulated superconducting qubit chips — 3D transmon, 6-qubit Candle architecture, 4-qubit tunable transmon, 4-qubit coupled tunable transmon — using Qiskit Metal and Ansys HFSS for EPR/LOM analysis, with KLayout modifications.</li>
+          <li>Executed quantum device characterization in a BlueFors dilution refrigerator: resonator/qubit spectroscopy, Rabi oscillations, and relaxation/dephasing (T<sub>1</sub>, Ramsey T<sub>2</sub>*) with Zurich Instruments' LabOne Q.</li>
+          <li>Developed a LabOne-Q measurement codebase with automated data saving/plotting and direct script-to-script output passing for multi-step experiments.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Prof. Chee Wei Wong's Group &nbsp;·&nbsp; Superconducting Qubits</span>
-        <span>Los Angeles, CA</span>
-      </div>
-      <ul>
-        <li>Designed and simulated multiple superconducting qubit chips — 3D transmon, 6-qubit Candle architecture, 4-qubit tunable transmon, and 4-qubit coupled tunable transmon — using Qiskit Metal and Ansys HFSS for EPR/LOM analysis, with layout modifications in KLayout.</li>
-        <li>Executed quantum device characterization in a BlueFors dilution refrigerator: resonator/qubit spectroscopy, Rabi oscillations, and relaxation/dephasing (T<sub>1</sub>, Ramsey T<sub>2</sub>*) experiments on Candle and 9-qubit coupled chips with Zurich Instruments' LabOne Q.</li>
-        <li>Developed a LabOne-Q measurement codebase with automated data saving/plotting routines and direct script-to-script output passing for streamlined multi-step experiments.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Chinese Academy of Sciences, Institute of Computing Technology</span>
-        <span class="entry-date">Jul 2023 – Aug 2023</span>
+      <div class="entry reveal reveal-delay-2">
+        <div class="entry-header">
+          <span class="entry-title">Chinese Academy of Sciences, Institute of Computing Technology</span>
+          <span class="entry-date">Jul 2023 – Aug 2023</span>
+        </div>
+        <div class="entry-sub">
+          <span>Prof. Xiaoming Sun's Group &nbsp;·&nbsp; Quantum Algorithms &amp; Simulation</span>
+          <span>Beijing, China</span>
+        </div>
+        <ul>
+          <li>Researched error mitigation for Trotter decomposition and improvements via the Linear Combination of Unitaries (LCU) approach.</li>
+          <li>Enhanced the Hamiltonian simulation module of the QuICT open-source package: first- and fourth-order Trotter decompositions and LCU-based evolution methods.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Prof. Xiaoming Sun's Group &nbsp;·&nbsp; Quantum Algorithms &amp; Simulation</span>
-        <span>Beijing, China</span>
-      </div>
-      <ul>
-        <li>Conducted research on quantum simulation, focusing on error mitigation for Trotter decomposition and improvements via the Linear Combination of Unitaries (LCU) approach.</li>
-        <li>Enhanced the Hamiltonian simulation module of the QuICT open-source package, implementing first- and fourth-order Trotter decompositions and prototyping LCU-based evolution methods in Python.</li>
-      </ul>
+
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
     <h2>Selected Projects</h2>
+    <div class="projects-grid">
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Semiconductor Processing and Microscopy Characterization</span>
-        <span class="entry-date">Apr – Jun 2025</span>
+      <div class="proj-card reveal">
+        <div class="proj-title">Semiconductor Processing &amp; Microscopy Characterization</div>
+        <div class="proj-date">Apr – Jun 2025</div>
+        <ul>
+          <li>Fabricated microstructures on silicon wafers via photolithography and wet etching.</li>
+          <li>Characterized using SEM, FIB, and TEM; lamella lift-outs to reveal transistor features on an Intel Pentium 4 chip.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Fabricated microstructures on silicon wafers using photolithography and wet etching techniques.</li>
-        <li>Characterized devices using SEM, FIB, and TEM; performed high-resolution imaging and lamella lift-outs to reveal transistor-level features on an Intel Pentium 4 chip.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Quantum NMR Lab</span>
-        <span class="entry-date">Jan – Mar 2025</span>
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-title">Quantum NMR Lab</div>
+        <div class="proj-date">Jan – Mar 2025</div>
+        <ul>
+          <li>Quantum NMR on Magritek SpinSolve: π/2 calibration, FID/Spin Echo/CPMG sequences.</li>
+          <li>Executed two-qubit gates on <sup>13</sup>CHCl<sub>3</sub> — Hadamard, CNOT, Deutsch–Jozsa algorithm.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Performed quantum NMR experiments on the Magritek SpinSolve platform, calibrating π/2 pulses and measuring relaxation constants via FID, Spin Echo, and CPMG sequences.</li>
-        <li>Executed two-qubit gates on <sup>13</sup>CHCl<sub>3</sub>, including Hadamard, CNOT, and the Deutsch–Jozsa algorithm.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Classical Quantum Circuit Simulator</span>
-        <span class="entry-date">Dec 2024</span>
+      <div class="proj-card reveal reveal-delay-2">
+        <div class="proj-title">Classical Quantum Circuit Simulator</div>
+        <div class="proj-date">Dec 2024</div>
+        <ul>
+          <li>Python QASM simulator using state-vector amplitudes, avoiding full matrix computation for large circuits.</li>
+          <li>Benchmarked 15 industry-standard circuits; extracted linear correlations between complexity and runtime.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Built a Python-based QASM simulator using matrix multiplication for small circuits; optimized large-circuit performance by applying gates directly to state-vector amplitudes.</li>
-        <li>Benchmarked 15 industry-standard QASM circuits, extracting strong linear correlations between circuit complexity and runtime.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Quantum Optics Lab</span>
-        <span class="entry-date">Sep – Dec 2024</span>
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-title">Quantum Optics Lab</div>
+        <div class="proj-date">Sep – Dec 2024</div>
+        <ul>
+          <li>Built Michelson/Mach–Zehnder interferometers; measured cavity finesse ≈16 and observed TEM modes.</li>
+          <li>Generated SPDC photon pairs at ~3.8×10<sup>3</sup> coincidences/s; CHSH Bell-inequality tests.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Built and aligned Michelson/Mach–Zehnder interferometers and a four-mirror optical cavity; measured cavity finesse of ≈16 and observed lower-order TEM spatial modes.</li>
-        <li>Generated SPDC photon pairs at ~3.8×10<sup>3</sup> coincidences/s and characterized entanglement through visibility measurements, one- and two-qubit tomography, and CHSH Bell-inequality tests.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Lenia – Cellular Automata</span>
-        <span class="entry-date">Apr 2024</span>
+      <div class="proj-card reveal reveal-delay-2">
+        <div class="proj-title">Lenia – Cellular Automata</div>
+        <div class="proj-date">Apr 2024</div>
+        <ul>
+          <li>Implemented Lenia and Particle Lenia for complex biological behavior simulation.</li>
+          <li>40% speedup across 3000 frames using JAX and FFT-based convolution.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Implemented Lenia and Particle Lenia to simulate complex biological behaviors using particle systems and energy-based formulations for mass conservation and dynamic stability.</li>
-        <li>Optimized large-scale simulations with JAX and FFT-based convolution, achieving a 40% speedup across 3000 frames.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Ising Model Simulation</span>
-        <span class="entry-date">Mar 2023</span>
+      <div class="proj-card reveal reveal-delay-3">
+        <div class="proj-title">Ising Model Simulation</div>
+        <div class="proj-date">Mar 2023</div>
+        <ul>
+          <li>Simulated N×N spin lattice with Metropolis–Hastings / Monte Carlo via NumPy boolean masking.</li>
+          <li>Investigated thermodynamic properties near the phase transition.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Simulated an N×N lattice with spin coupling and an applied external magnetic field.</li>
-        <li>Applied the Metropolis–Hastings algorithm via Monte Carlo methods using NumPy boolean masking; investigated thermodynamic properties near the phase transition.</li>
-      </ul>
+
     </div>
   </section>
 
-  <!-- ADDITIONAL EXPERIENCE -->
+  <!-- EXPERIENCE -->
   <section id="experience">
     <h2>Additional Experience</h2>
+    <div class="entries">
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Mercor</span>
-        <span class="entry-date">Nov 2025 – Present</span>
+      <div class="entry reveal">
+        <div class="entry-header">
+          <span class="entry-title">Mercor</span>
+          <span class="entry-date">Nov 2025 – Present</span>
+        </div>
+        <div class="entry-sub">
+          <span>Mercor AI &nbsp;·&nbsp; Physics Expert</span>
+          <span>Remote, USA</span>
+        </div>
+        <ul>
+          <li>Designed advanced physics problems to probe AI reasoning limits; analyzed failure modes in EM, quantum circuits, and condensed matter.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Mercor AI &nbsp;·&nbsp; Physics Expert</span>
-        <span>Remote, USA</span>
-      </div>
-      <ul>
-        <li>Designed advanced physics questions to probe reasoning limits of AI models; analyzed failure modes to identify gaps in EM, quantum circuits, and condensed matter understanding.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Lumi Academy</span>
-        <span class="entry-date">Jul – Aug 2024</span>
+      <div class="entry reveal reveal-delay-1">
+        <div class="entry-header">
+          <span class="entry-title">Lumi Academy</span>
+          <span class="entry-date">Jul – Aug 2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Oxbridge Summer Camp &nbsp;·&nbsp; Course Designer &amp; Instructor</span>
+          <span>Shanghai, China</span>
+        </div>
+        <ul>
+          <li>Designed and delivered a two-week lecture series for 7 AS-level students on advanced mathematics, physics, and material science for Oxbridge preparation.</li>
+          <li>One-on-one mentorship: tailored personal statement feedback and mock interviews.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Oxbridge Summer Camp &nbsp;·&nbsp; Course Designer &amp; Instructor</span>
-        <span>Shanghai, China</span>
-      </div>
-      <ul>
-        <li>Designed and delivered a two-week lecture series for 7 AS-level students covering advanced mathematics, physics, and material science for Oxbridge preparation.</li>
-        <li>Provided one-on-one mentorship with tailored personal statement feedback and mock interviews.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Impington Village College</span>
-        <span class="entry-date">Jan – Mar 2024</span>
+      <div class="entry reveal reveal-delay-2">
+        <div class="entry-header">
+          <span class="entry-title">Impington Village College</span>
+          <span class="entry-date">Jan – Mar 2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Teaching Assistant &nbsp;·&nbsp; Year 10 GCSE Physics</span>
+          <span>Cambridge, UK</span>
+        </div>
+        <ul>
+          <li>Designed a project-based curriculum on vectors and scalars; weekly classroom support on atomic physics and radioactivity.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Teaching Assistant &nbsp;·&nbsp; Year 10 GCSE Physics</span>
-        <span>Cambridge, UK</span>
-      </div>
-      <ul>
-        <li>Designed a project-based curriculum on vectors and scalars; supported student learning through weekly classroom shadowing and guidance on atomic physics and radioactivity.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Jane Street</span>
-        <span class="entry-date">Apr 2023</span>
+      <div class="entry reveal reveal-delay-3">
+        <div class="entry-header">
+          <span class="entry-title">Jane Street</span>
+          <span class="entry-date">Apr 2023</span>
+        </div>
+        <div class="entry-sub">
+          <span>INSIGHT Programme &nbsp;·&nbsp; Trading Track</span>
+          <span>London, UK</span>
+        </div>
+        <ul>
+          <li>Intensive quantitative trading training: probability, market structure, arbitrage. <strong>1st place</strong> in the Estimathon competition.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>INSIGHT Programme &nbsp;·&nbsp; Trading Track</span>
-        <span>London, UK</span>
-      </div>
-      <ul>
-        <li>Engaged in intensive quantitative trading training covering probability, market structure, and arbitrage. Secured 1st place in the Estimathon competition.</li>
-      </ul>
-    </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Cambridge University Chinese Society</span>
-        <span class="entry-date">Mar 2022 – Mar 2023</span>
+      <div class="entry reveal reveal-delay-3">
+        <div class="entry-header">
+          <span class="entry-title">Cambridge University Chinese Society</span>
+          <span class="entry-date">Mar 2022 – Mar 2023</span>
+        </div>
+        <div class="entry-sub">
+          <span>Media Officer</span>
+          <span>Cambridge, UK</span>
+        </div>
+        <ul>
+          <li>Managed and grew the society's social media (Instagram, WeChat) through creative content and major event organisation.</li>
+        </ul>
       </div>
-      <div class="entry-sub">
-        <span>Media Officer</span>
-        <span>Cambridge, UK</span>
-      </div>
-      <ul>
-        <li>Managed and expanded the society's social media presence (Instagram, WeChat) by producing creative content and organizing major events.</li>
-      </ul>
+
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <span class="skills-label">Python</span>
-      <span class="skills-value">Qiskit, QuTip, QuICT, LabOne Q, JAX NumPy, Pandas, PyTorch, TensorFlow</span>
+    <div class="skills-section">
 
-      <span class="skills-label">Software</span>
-      <span class="skills-value">Ansys HFSS, COMSOL, KLayout, Keysight ADS, AutoCAD</span>
+      <div class="skill-group reveal">
+        <div class="skill-label">Python Packages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Qiskit</span>
+          <span class="skill-tag">Qiskit Metal</span>
+          <span class="skill-tag">QuTip</span>
+          <span class="skill-tag">QuICT</span>
+          <span class="skill-tag">LabOne Q</span>
+          <span class="skill-tag">JAX</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+        </div>
+      </div>
 
-      <span class="skills-label">Lab</span>
-      <span class="skills-value">Cryogenic hardware operation, optical setup and alignment, fabrication</span>
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-label">Software</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Ansys HFSS</span>
+          <span class="skill-tag">COMSOL</span>
+          <span class="skill-tag">KLayout</span>
+          <span class="skill-tag">Keysight ADS</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Linux</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-label">Lab Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Cryogenic hardware (dilution refrigerators)</span>
+          <span class="skill-tag">Optical setup &amp; alignment</span>
+          <span class="skill-tag">Photolithography</span>
+          <span class="skill-tag">Wet etching</span>
+          <span class="skill-tag">SEM / FIB / TEM</span>
+          <span class="skill-tag">Microwave characterisation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-caption="Cambridge Graduation, 2024">
+        <img src="photos/graduation.jpg" alt="Cambridge Graduation" loading="lazy" />
+        <div class="gallery-caption">Cambridge Graduation, 2024</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-caption="Sunset at Nice Harbor, France">
+        <img src="photos/nice_harbor.jpg" alt="Nice Harbor, France" loading="lazy" />
+        <div class="gallery-caption">Nice Harbor, France</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" data-caption="Old town alley, South of France">
+        <img src="photos/france_alley.jpg" alt="South of France" loading="lazy" />
+        <div class="gallery-caption">South of France</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3" data-caption="Making capybara friends, Japan">
+        <img src="photos/japan_capybara.jpg" alt="Japan" loading="lazy" />
+        <div class="gallery-caption">Japan</div>
+      </div>
     </div>
   </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <p>Yi Zheng &nbsp;·&nbsp; <a href="mailto:yizheng.0122@gmail.com">yizheng.0122@gmail.com</a></p>
+  <span>Yi Zheng &nbsp;·&nbsp; <a href="mailto:yizheng.0122@gmail.com">yizheng.0122@gmail.com</a></span>
+  <span>Built with plain HTML/CSS/JS</span>
 </footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&#x2715;</button>
+  <img id="lightboxImg" src="" alt="" />
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+  // ── DARK MODE ──
+  const toggle = document.getElementById('themeToggle');
+  const icon   = document.getElementById('themeIcon');
+  const label  = document.getElementById('themeLabel');
+  const saved  = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateToggle(saved);
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateToggle(next);
+  });
+
+  function updateToggle(theme) {
+    if (theme === 'dark') { icon.textContent = '☀️'; label.textContent = 'Light'; }
+    else                  { icon.textContent = '🌙'; label.textContent = 'Dark';  }
+  }
+
+  // ── TYPED TEXT ──
+  const phrases = [
+    'Quantum materials researcher',
+    'Superconducting qubit designer',
+    'SLAC / Stanford · UCLA · Cambridge',
+    'Dilution refrigerator wrangler',
+    'Physics problem creator',
+  ];
+  let pi = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typed-text');
+
+  function type() {
+    const phrase = phrases[pi];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ++ci);
+      if (ci === phrase.length) { deleting = true; setTimeout(type, 1800); return; }
+    } else {
+      el.textContent = phrase.slice(0, --ci);
+      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+    }
+    setTimeout(type, deleting ? 38 : 68);
+  }
+  setTimeout(type, 600);
+
+  // ── SCROLL REVEAL ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── ACTIVE NAV ──
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => navObserver.observe(s));
+
+  // ── LIGHTBOX ──
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightboxImg');
+  const lbCap    = document.getElementById('lightboxCaption');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      lbImg.src = item.querySelector('img').src;
+      lbImg.alt = item.querySelector('img').alt;
+      lbCap.textContent = item.dataset.caption || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
 
 </body>
 </html>
