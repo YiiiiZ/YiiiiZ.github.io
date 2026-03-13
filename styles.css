@@ -572,7 +572,7 @@ h2::after {
   margin-top: 1rem;
   border-radius: 10px;
   width: 100%;
-  max-width: 100%;
+  max-width: 560px;
   height: auto;
   display: block;
   box-shadow: var(--shadow);
