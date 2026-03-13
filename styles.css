@@ -571,8 +571,9 @@ h2::after {
 .log-photo {
   margin-top: 1rem;
   border-radius: 10px;
-  max-width: 480px;
   width: 100%;
+  max-width: 100%;
+  height: auto;
   display: block;
   box-shadow: var(--shadow);
 }
