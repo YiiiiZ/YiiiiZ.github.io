@@ -541,6 +541,42 @@ h2::after {
 }
 
 
+/* ── LOG ── */
+.log-list { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.log-entry {
+  border-left: 3px solid var(--border);
+  padding-left: 1.5rem;
+  transition: border-color var(--transition);
+}
+
+.log-entry:hover { border-color: var(--accent); }
+
+.log-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.log-body p {
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 640px;
+}
+
+.log-photo {
+  margin-top: 1rem;
+  border-radius: 10px;
+  max-width: 480px;
+  width: 100%;
+  display: block;
+  box-shadow: var(--shadow);
+}
+
 /* ── FOOTER ── */
 footer {
   max-width: var(--max-w);
