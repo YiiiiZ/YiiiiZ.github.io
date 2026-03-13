@@ -14,13 +14,11 @@
     <a class="nav-logo" href="#hero">Yi Zheng</a>
     <ul>
       <li><a href="#news">News</a></li>
-      <li><a href="#stanford">Stanford</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#gallery">Gallery</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
@@ -34,7 +32,7 @@
   <section id="hero">
     <div class="hero-text">
       <h1>Yi <span>Zheng</span></h1>
-      <p class="tagline">Quantum Scientist &nbsp;·&nbsp; UCLA &nbsp;·&nbsp; Cambridge</p>
+      <p class="tagline">Quantum Scientist &nbsp;·&nbsp; Stanford &nbsp;·&nbsp; UCLA &nbsp;·&nbsp; Cambridge</p>
       <div class="typed-wrapper">
         <span id="typed-text"></span><span class="typed-cursor"></span>
       </div>
@@ -97,7 +95,7 @@
         <div class="edu-degree">Master of Quantum Science and Technology</div>
         <div class="edu-meta">
           <span class="edu-date">Sep 2024 – Sep 2025 &nbsp;·&nbsp; Los Angeles, USA</span>
-          <span class="edu-badge">GPA 3.97 / 4</span>
+
         </div>
       </div>
 
@@ -112,9 +110,9 @@
     </div>
   </section>
 
-  <!-- STANFORD -->
-  <section id="stanford">
-    <h2>Stanford University</h2>
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research Experience</h2>
     <div class="entries">
 
       <div class="entry reveal">
@@ -133,15 +131,7 @@
         </ul>
       </div>
 
-    </div>
-  </section>
-
-  <!-- RESEARCH -->
-  <section id="research">
-    <h2>Research Experience</h2>
-    <div class="entries">
-
-      <div class="entry reveal">
+      <div class="entry reveal reveal-delay-1">
         <div class="entry-header">
           <span class="entry-title">University of California, Los Angeles (UCLA)</span>
           <span class="entry-date">May 2025 – Sep 2025</span>
@@ -157,7 +147,7 @@
         </ul>
       </div>
 
-      <div class="entry reveal reveal-delay-1">
+      <div class="entry reveal reveal-delay-2">
         <div class="entry-header">
           <span class="entry-title">Chinese Academy of Sciences, Institute of Computing Technology</span>
           <span class="entry-date">Jul 2023 – Aug 2023</span>
@@ -367,28 +357,6 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal" data-caption="Cambridge Graduation, 2024">
-        <img src="photos/graduation.jpg" alt="Cambridge Graduation" loading="lazy" />
-        <div class="gallery-caption">Cambridge Graduation, 2024</div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-1" data-caption="Sunset at Nice Harbor, France">
-        <img src="photos/nice_harbor.jpg" alt="Nice Harbor, France" loading="lazy" />
-        <div class="gallery-caption">Nice Harbor, France</div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-2" data-caption="Old town alley, South of France">
-        <img src="photos/france_alley.jpg" alt="South of France" loading="lazy" />
-        <div class="gallery-caption">South of France</div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-3" data-caption="Making capybara friends, Japan">
-        <img src="photos/japan_capybara.jpg" alt="Japan" loading="lazy" />
-        <div class="gallery-caption">Japan</div>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -398,12 +366,6 @@
   <span>Built with plain HTML/CSS/JS</span>
 </footer>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">&#x2715;</button>
-  <img id="lightboxImg" src="" alt="" />
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
 
 <script>
   // ── DARK MODE ──
@@ -471,29 +433,6 @@
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach(s => navObserver.observe(s));
 
-  // ── LIGHTBOX ──
-  const lightbox = document.getElementById('lightbox');
-  const lbImg    = document.getElementById('lightboxImg');
-  const lbCap    = document.getElementById('lightboxCaption');
-
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      lbImg.src = item.querySelector('img').src;
-      lbImg.alt = item.querySelector('img').alt;
-      lbCap.textContent = item.dataset.caption || '';
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
 </script>
 
 </body>
