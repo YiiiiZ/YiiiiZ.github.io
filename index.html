@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yi Zheng — Quantum Scientist</title>
+  <title>Yi Zheng — AI Researcher &amp; Quantum Scientist</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -33,7 +33,7 @@
   <section id="hero">
     <div class="hero-text">
       <h1>Yi <span>Zheng</span></h1>
-      <p class="tagline">Quantum Scientist &nbsp;·&nbsp; Stanford &nbsp;·&nbsp; UCLA &nbsp;·&nbsp; Cambridge</p>
+      <p class="tagline">AI Researcher &amp; Quantum Scientist &nbsp;·&nbsp; Philo Labs &nbsp;·&nbsp; Stanford &nbsp;·&nbsp; Cambridge</p>
       <div class="typed-wrapper">
         <span id="typed-text"></span><span class="typed-cursor"></span>
       </div>
@@ -59,6 +59,14 @@
   <section id="news">
     <h2>News</h2>
     <div class="news-list">
+      <div class="news-item reveal">
+        <span class="news-date">Jun 2026</span>
+        <span class="news-text"><span class="news-tag tag-research">Project</span>Built a <strong>Specialty Pharmacy Care Plan AI System</strong> — LangGraph pipeline + RAG over the FDA SPL corpus (91K chunks); 98.4% F1, cutting manual authoring from 40 min to under 2 min.</span>
+      </div>
+      <div class="news-item reveal reveal-delay-1">
+        <span class="news-date">Apr 2026</span>
+        <span class="news-text"><span class="news-tag tag-news">Work</span>Joined <strong>Philo Labs</strong> as an AI Research Intern; second author of <strong>AgenticVBench</strong> (submitted to NeurIPS 2026), a 100-task agentic video post-production benchmark.</span>
+      </div>
       <div class="news-item reveal">
         <span class="news-date">Mar 2026</span>
         <span class="news-text"><span class="news-tag tag-research">Research</span>Personal website launched — find all my work here.</span>
@@ -119,7 +127,7 @@
       <div class="entry reveal">
         <div class="entry-header">
           <span class="entry-title">Stanford University</span>
-          <span class="entry-date">Nov 2025 – Present</span>
+          <span class="entry-date">Nov 2025 – Apr 2026</span>
         </div>
         <div class="entry-sub">
           <span>Prof. Zhurun Ji's Group &amp; Prof. Chao-Lin Kuo's Group &nbsp;·&nbsp; Quantum Sensing &amp; Materials</span>
@@ -172,6 +180,15 @@
     <div class="projects-grid">
 
       <div class="proj-card reveal">
+        <div class="proj-title">Specialty Pharmacy Care Plan AI System</div>
+        <div class="proj-date">Jun 2026</div>
+        <ul>
+          <li>Automated care plan generation from patient records and FDA drug labels via a LangGraph pipeline with complexity routing, schema-constrained generation, and hallucination verification; cut authoring time from 20–40 min to under 2 min.</li>
+          <li>Built a RAG knowledge base over the FDA SPL corpus (1,842 archives, 91K chunks) with Pydantic validation, LLM-as-judge auditing, and repair retries; achieved 98.4% F1 and 11.2% token reduction.</li>
+        </ul>
+      </div>
+
+      <div class="proj-card reveal reveal-delay-1">
         <div class="proj-title">Semiconductor Processing &amp; Microscopy Characterization</div>
         <div class="proj-date">Apr – Jun 2025</div>
         <ul>
@@ -230,21 +247,36 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <h2>Additional Experience</h2>
+    <h2>Professional Experience</h2>
     <div class="entries">
 
       <div class="entry reveal">
+        <div class="entry-header">
+          <span class="entry-title">Philo Labs</span>
+          <span class="entry-date">Apr 2026 – Jun 2026</span>
+        </div>
+        <div class="entry-sub">
+          <span>AI Research Intern &nbsp;·&nbsp; Multimodal Post-Training &amp; Reinforcement Learning</span>
+          <span>San Francisco, CA</span>
+        </div>
+        <ul>
+          <li>Second author of <strong>AgenticVBench</strong> (submitted to NeurIPS 2026), a 100-task agentic video post-production benchmark; originated the repair and sequencing task families and designed verifiable reward functions.</li>
+          <li>Trained a VLM defect gate for world-model-generated robot trajectory videos on a curated 500+ clip multi-generator dataset; designed a 5-mode failure taxonomy and applied deploy-loss SFT/LoRA on Qwen3-VL-30B-A3B — improving gate F1 from 0.52 → 0.76, surpassing the Gemini 3.1 Pro frontier (0.73).</li>
+        </ul>
+      </div>
+
+      <div class="entry reveal reveal-delay-1">
         <div class="entry-header">
           <span class="entry-title">Mercor</span>
           <span class="entry-date">Nov 2025 – Present</span>
         </div>
         <div class="entry-sub">
-          <span>Mercor AI &nbsp;·&nbsp; Physics Expert</span>
+          <span>AI Training Specialist &nbsp;·&nbsp; Reinforcement Learning Data</span>
           <span>Remote, USA</span>
         </div>
         <ul>
-          <li>Designed 30+ research-level physics benchmark problems with full solutions to evaluate reasoning capabilities of frontier LLMs, contributing &gt;10% of the question pool in a 50+ member evaluation team.</li>
-          <li>Analyzed LLM reasoning failures on benchmarks spanning quantum information, condensed matter, circuit QED, and physics-informed ML; identified limits in long-context reasoning and numerical optimization.</li>
+          <li>Produced training data for two NDA-protected RL training projects; authored structured rationales and ranking decisions as reward signals for a generative AI model.</li>
+          <li>Designed 30+ expert-level physics evaluations with reference solutions to probe frontier-LLM failure modes across quantum information, condensed matter, and circuit QED.</li>
         </ul>
       </div>
 
@@ -314,36 +346,54 @@
     <div class="skills-section">
 
       <div class="skill-group reveal">
-        <div class="skill-label">Python Packages</div>
+        <div class="skill-label">AI / ML</div>
         <div class="skill-tags">
-          <span class="skill-tag">Qiskit</span>
-          <span class="skill-tag">Qiskit Metal</span>
-          <span class="skill-tag">QuTip</span>
-          <span class="skill-tag">QuICT</span>
-          <span class="skill-tag">LabOne Q</span>
-          <span class="skill-tag">JAX</span>
-          <span class="skill-tag">NumPy</span>
-          <span class="skill-tag">Pandas</span>
-          <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Post-training (SFT / LoRA)</span>
+          <span class="skill-tag">RL reward design</span>
+          <span class="skill-tag">LLM / VLM evaluation &amp; grading</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">Hallucination detection</span>
+          <span class="skill-tag">Agentic &amp; multi-agent orchestration</span>
         </div>
       </div>
 
       <div class="skill-group reveal reveal-delay-1">
-        <div class="skill-label">Simulation</div>
+        <div class="skill-label">Libraries &amp; Infra</div>
         <div class="skill-tags">
-          <span class="skill-tag">Ansys Electronics / HFSS</span>
-          <span class="skill-tag">Sonnet</span>
-          <span class="skill-tag">KLayout</span>
-          <span class="skill-tag">Keysight ADS</span>
-          <span class="skill-tag">Fusion</span>
-          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Transformers</span>
+          <span class="skill-tag">Hugging Face</span>
+          <span class="skill-tag">LangGraph</span>
+          <span class="skill-tag">OpenAI Agents SDK</span>
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Pydantic</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Modal</span>
+          <span class="skill-tag">FFmpeg</span>
+          <span class="skill-tag">JAX</span>
+          <span class="skill-tag">NumPy</span>
           <span class="skill-tag">Git</span>
           <span class="skill-tag">Linux</span>
         </div>
       </div>
 
       <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-label">Quantum &amp; Simulation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Qiskit</span>
+          <span class="skill-tag">Qiskit Metal</span>
+          <span class="skill-tag">QuTiP</span>
+          <span class="skill-tag">QuICT</span>
+          <span class="skill-tag">LabOne Q</span>
+          <span class="skill-tag">Ansys Electronics / HFSS</span>
+          <span class="skill-tag">Sonnet</span>
+          <span class="skill-tag">KLayout</span>
+          <span class="skill-tag">Keysight ADS</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-3">
         <div class="skill-label">Lab Skills</div>
         <div class="skill-tags">
           <span class="skill-tag">Cryogenic hardware (dilution refrigerators)</span>
@@ -408,11 +458,11 @@
 
   // ── TYPED TEXT ──
   const phrases = [
-    'Quantum materials researcher',
+    'AI researcher & quantum scientist',
+    'VLM fine-tuning & RL reward design',
+    'NeurIPS 2026 co-author',
     'Superconducting qubit designer',
-    'Stanford · UCLA · Cambridge',
     'Dilution refrigerator wrangler',
-    'Physics problem creator',
   ];
   let pi = 0, ci = 0, deleting = false;
   const el = document.getElementById('typed-text');
