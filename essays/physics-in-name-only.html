@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics in Name Only — Yi Zheng</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1117;
+      --text: #e8eaf0;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --border: #2a3142;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .essay-meta {
+      margin-bottom: 2.5rem;
+    }
+
+    .essay-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    [data-theme="dark"] .essay-date {
+      background: rgba(96, 165, 250, 0.1);
+      border-color: rgba(96, 165, 250, 0.22);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .essay-body p {
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      opacity: 0.92;
+    }
+
+    .essay-body p:last-child { margin-bottom: 0; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      article { padding: 2.5rem 1.25rem 4rem; }
+      h1 { font-size: 1.5rem; }
+      header { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="../index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+    Yi Zheng
+  </a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
+  </button>
+</header>
+
+<article>
+  <div class="essay-meta">
+    <div class="essay-date">Jun 2026</div>
+    <h1>Physics in Name Only — Why physics is not the remedy for video gen models</h1>
+  </div>
+
+  <div class="essay-body">
+    <p>"Physics is the art of approximation," said my undergraduate physics professor. I take it as the definition of physics. Physics is all about how to reconcile empirical observations and theoretical derivations. AI video generation embraces the concept of physics in a phenomenological way: we claim there is a physics failure when we see things evolve unrealistically.</p>
+
+    <p>Instead of misaligning with the real world, we think it is misaligning with physics. But physics is not a truthful representation of the real world. It is an elegant approximation framework that people try to use to predict empirical observations, and then use those observations to realign the theory. It tries to align with the world but never does so with 100% confidence; we think a theory is correct before any empirical observation falsifies it. Even if it is falsified, we try to patch it up, just like introducing quantum physics and relativity to the physics manifold last century. For AI video gen, we borrow terms from physics to create a better failure taxonomy of untruthful scenes generated.</p>
+
+    <p>Claiming physics as the failure mode of video generation is inaccurate but acceptable; it has the merit of turning things into commonly used terms that can be easily quoted and understood. What remains unsettling is that we try to mitigate the problem in a physics way. That is, by connecting the models to a simulation environment. Simulation is a good probe into the physics framework, as it can do more computation than a human in a short interval and figure out one-step-up scenarios from toy examples of physics. But it never achieves the pixel accuracy of reality, because the information that can be extracted and parsed for a scenario is limited.</p>
+
+    <p>And this is problematic for video gen. The issues here are two-layered. One is that the complexity of the world we live in will directly reflect in videos. Each video will include redundant information that is all intertwined, and many tiny bits all play together to reach a physical outcome. This makes the physics simulation unreliable, because we never know whether we capture all factors related to a physical phenomenon — likely not. The second issue is quite the other way around: while holding excessive information, video never includes enough information, either. One simple piece of evidence here is that we live in a 3D world while we compose the world into 2D videos. The loss of dimension will almost certainly lead to a loss of information. I cannot predict the actual motion of a feather falling down in a video because the motion trajectory is 3D. There is more than that: even if one day we are able to make video 3D, we cannot extract information about object friction, object weight, object elasticity, and more. Those physical quantities were created to help us better model the world, and they are not first-hand information that can be captured by our visual perception. So you see, on one side we cannot get rid of excessive information to run a clean simulation; on the other side, we cannot faithfully eyeball physical quantities to carry out the simulation.</p>
+
+    <p>The modality of the video is special. Different from text or images, video is a modality that mimics our visual perception directly. We see everything in front of us with a 2D image connected to our neurons, and we build up our spatial understanding through experience. Thus, judging the plausibility of a video is experience-based. Being experience-based also means the boundary is blurred. Maybe at some point the video is still not truthful, but it is close enough that I cannot distinguish. This makes a verifiable reward challenging to develop. Our brain is such a great design that it builds up connections between different aspects of an object and reacts efficiently when any one of those aspects is triggered. When I smell fried chicken, my brain stages the shape, the texture, the recipe, and so much more related information to the front row. And this leads to my view that VLMs have to follow the same path. An enormous amount of data, and enough time to consolidate their understanding of the world. Let the Bitter Lesson carry this onward.</p>
+  </div>
+</article>
+
+<footer>
+  <a href="../index.html">Yi Zheng</a>
+</footer>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const icon   = document.getElementById('themeIcon');
+  const label  = document.getElementById('themeLabel');
+  const saved  = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateToggle(saved);
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateToggle(next);
+  });
+
+  function updateToggle(theme) {
+    if (theme === 'dark') { icon.textContent = '☀️'; label.textContent = 'Light'; }
+    else                  { icon.textContent = '🌙'; label.textContent = 'Dark';  }
+  }
+</script>
+
+</body>
+</html>

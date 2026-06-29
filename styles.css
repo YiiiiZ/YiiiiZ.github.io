@@ -586,6 +586,22 @@ h2::after {
   margin-bottom: 0.6rem;
 }
 
+.essay-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
+  line-height: 1.4;
+}
+
+.essay-link:hover {
+  color: var(--accent);
+}
+
 .log-body p {
   font-size: 0.93rem;
   line-height: 1.75;
